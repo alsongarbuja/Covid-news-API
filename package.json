@@ -1,7 +1,7 @@
 {
   "name": "test-api",
   "version": "1.0.0",
-  "description": "just a test api",
+  "description": "An Rest API for Covid 19 news from different sources",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
