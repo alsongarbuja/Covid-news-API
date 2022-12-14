@@ -1,10 +1,10 @@
 const PORT = process.env.PORT || 8000
 
-const express = require('express')
-const routes = require('./src/routes/route');
+import express from 'express';
+import { router} from './routes/route.js';
 
 const app = express()
 
-app.use('/', routes)
+app.use('/', router)
 
 app.listen(PORT, () => console.log(`server running on port: ${PORT}`))

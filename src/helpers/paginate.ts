@@ -1,4 +1,4 @@
-const paginate = (articles, limit, page) => {
+export const paginate = (articles, limit, page) => {
     let options = {}
     let toSendArticles = articles
 
@@ -28,4 +28,4 @@ const paginate = (articles, limit, page) => {
     return {toSendArticles, options}
 }
 
-module.exports = paginate
+// module.exports = paginate

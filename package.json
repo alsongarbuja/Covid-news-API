@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "An Rest API for Covid 19 news from different sources",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon dist/index.js",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "alson garbuja",
@@ -14,5 +16,10 @@
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.15",
+    "typescript": "^4.9.4"
   }
 }

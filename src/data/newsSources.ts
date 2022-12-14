@@ -1,4 +1,4 @@
-const newsSources = [
+export const newsSources = [
     {
         sourceId: "theguardian",
         name: "The guardian",
@@ -48,4 +48,3 @@ const newsSources = [
         base: "https://www.who.int"
     }
 ]
-module.exports = newsSources

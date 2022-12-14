@@ -1,10 +1,10 @@
-const axios = require('axios').default
-const cheerio = require('cheerio')
+import axios from 'axios'
+import cheerio from 'cheerio'
 
-const newsSources = require('../data/newsSources')
-const paginate = require('../helpers/paginate')
-const jsend = require('../helpers/jsend')
-const { sanitize, isText } = require('../helpers/validate')
+import { newsSources } from '../data/newsSources.js'
+import { paginate } from '../helpers/paginate.js'
+import { jsend } from '../helpers/jsend.js'
+import { sanitize, isText } from '../helpers/validate.js'
 
 const articles = []
 
@@ -33,7 +33,7 @@ newsSources.map(news => {
     }).catch(err => console.log(err))
 })
 
-const getNews = (req, res) => {
+export const getNews = (req, res) => {
     const { limit, page } = req.query
 
     const { toSendArticles, options } = paginate(articles, limit, page)
@@ -45,7 +45,7 @@ const getNews = (req, res) => {
     }))
 }
 
-const getNewsFromSingleSource = (req, res) => {
+export const getNewsFromSingleSource = (req, res) => {
     const { limit, page } = req.query
     const newsId = req.params.newsId
 
@@ -91,4 +91,4 @@ const getNewsFromSingleSource = (req, res) => {
     })
 }
 
-module.exports = { getNews, getNewsFromSingleSource }
+// module.exports = { getNews, getNewsFromSingleSource }
